@@ -22,6 +22,17 @@ The application returns HTTP 503 until all four values are configured. Other
 WorkOS users receive HTTP 403 even if they can sign in to the same AuthKit project.
 There is no anonymous-data mode or fixed-token fallback.
 
+## Automatic deployments
+
+The GitHub repository is connected to the existing Vercel project
+`twentyeight1/personal-garmin`. A push to `main` triggers a production deployment
+at `https://personal-garmin.vercel.app`; no separate GitHub Actions workflow is
+required. Review deployment status in the Vercel dashboard after pushing.
+
+Garmin credentials and OAuth settings stay in Vercel's Production environment.
+Preview deployments do not receive the Production Garmin key and remain
+unavailable until their own environment variables are configured.
+
 ## WorkOS configuration
 
 1. Use the same WorkOS environment as `AUTHKIT_ISSUER`.
