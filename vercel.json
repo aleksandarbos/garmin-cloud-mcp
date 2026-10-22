@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": { "api/gateway.js": { "maxDuration": 60 } },
+  "rewrites": [
+    { "source": "/", "destination": "/api/gateway" },
+    { "source": "/mcp", "destination": "/api/gateway" },
+    { "source": "/.well-known/oauth-protected-resource", "destination": "/api/gateway" },
+    { "source": "/.well-known/oauth-protected-resource/mcp", "destination": "/api/gateway" }
+  ]
+}

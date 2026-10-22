@@ -1,0 +1,13 @@
+{
+  "name": "personal-garmin-chatgpt",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "24.x" },
+  "scripts": { "test": "node --test", "start": "node scripts/local-server.js" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "garmin-personal-mcp": "0.1.1",
+    "jose": "6.2.13"
+  }
+}
